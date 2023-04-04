@@ -1,0 +1,19 @@
+{%extends 'layout.html'%}
+{%block title%}
+Home
+{%endblock%}
+    
+{%block body%}
+<center>
+	<div class="container">
+		<h1>URL SHORTNER</h1>
+		<body>
+            <form action="{{url_for('result')}}" method="post">
+                <label>Enter an https:// URL:</label>
+                <input type="text" name="url" placeholder="http://example.com">
+                <button>SUBMIT</button>
+            </form>
+	</div>
+    <h4><a href={{short_url}}>{{short_url}}</a></h4>
+    
+{%endblock%}
